@@ -24,7 +24,7 @@ export const WeatherApp = () => {
         try {
             console.log(import.meta.env.VITE_APP_URL);
             const request = await fetch(
-                `${import.meta.env.VITE_APP_URL}&key=${import.meta.env.VITE_APP_KEY}&q=${city}`
+                `http://api.weatherapi.com/v1/current.json?aqi=no=c780496d19ec471d86f30040221304&key&q=${city}`
                 );
                 const json = await request.json();
                 console.log(json);
